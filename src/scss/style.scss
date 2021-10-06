@@ -1,0 +1,218 @@
+@import url('./fonts.scss');
+@import url('~normalize.css/normalize.css');
+
+$SecondColor: #6886C5;
+
+body {
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+}
+.section {
+    height: 100vh;
+    width: 100%;
+    .animated_content {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        &#first {
+            opacity: 1;
+            display: flex;
+        }
+    }
+}
+p {
+    margin: 0;
+}
+.second_color {
+    color: $SecondColor;
+}
+
+.all_pages {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    p.my_name {
+        margin: {
+            left: 20px;
+            top: 15px;
+        };
+        font-size: 50px;
+        font-family: 'Salsa', cursive;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: {
+            right: 20px;
+            top: 15px;
+        };
+        p {
+            text-transform: uppercase;
+            font-family: 'Saira Condensed', sans-serif;
+            color: $SecondColor;
+            font-size: 20px;
+            margin-right: 6px;
+            margin-top: 2px;
+        }
+        img {
+            width: 32px;
+        }
+    }
+}
+
+
+div#first {
+    .text {
+        cursor: default;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        p {
+            font-family: 'Salsa', cursive;
+            &.title {
+                font-size: 80px;
+            }
+            &.sub_title {
+                color: #818181;
+                font-size: 24px;
+            }
+        }
+    }
+    .scroll_down {
+        cursor: default;
+        display: flex;
+        position: absolute;
+        bottom: 25px;
+        right: 72px;
+        align-items: center;
+        flex-direction: row;
+        p {
+            font-family: 'Saira Condensed', sans-serif;
+            color: #000000;
+            font-size: 24px;
+        }
+        img {
+            margin-top: 3px;
+        }
+    }
+}
+
+div#second {
+    p {
+        font-family: 'Salsa', cursive;
+        color: #343434;
+        &.title {
+            font-size: 80px;
+            margin-bottom: 25px;
+        }
+        &.about {
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+    }
+    .tables {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .item {
+            p {
+                &.profession {
+                    color: #6F6F6F;
+                    font-size: 40px;
+                }
+                &.point {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+}
+div#thrid {
+    font-family: 'Salsa', cursive;
+    .content {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -33%);
+    }
+    p {
+        &.title {
+            font-size: 80px;
+            margin-bottom: 40px;
+        }
+        &.github {
+            margin-top: 25px;
+            font-size: 38px;
+            color: $SecondColor;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover {
+                color: #0a3592;
+            }
+        }
+    }
+    .structure {
+        display: inline-block;
+        text-align: start;
+        p {
+            font-size: 22px;
+            span {
+                color: $SecondColor;
+            }
+        }
+    }
+}
+div#fourth {
+    font-family: 'Salsa', cursive;
+    .content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    p.title {
+        font-size: 80px;
+        margin-bottom: 40px;
+    }
+    .blocks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .item {
+            cursor: pointer;
+            margin-left: 30px;
+            &:first-child {
+                margin-left: 0;
+            }
+            p {
+                font-size: 24px;
+                color: #737373;
+            }
+        }
+    }
+}
